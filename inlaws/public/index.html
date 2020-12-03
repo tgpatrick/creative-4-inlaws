@@ -18,7 +18,13 @@
     {{test}}
     <ul>
       <li v-for="inlaw in inlaws">
-        {{ inlaw }}
+        {{ inlaw.name }}
+        <ul>
+          <li>{{inlaw.relation}}</li>
+          <li>{{inlaw.birthday}}</li>
+          <li>{{inlaw.hobbies}}</li>
+          <li>{{inlaw.notes}}</li>
+        </ul>
       </li>
     </ul>
   </div>
