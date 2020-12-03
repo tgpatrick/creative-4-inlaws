@@ -20,13 +20,33 @@
       <li v-for="inlaw in inlaws">
         {{ inlaw.name }}
         <ul>
-          <li>{{inlaw.relation}}</li>
-          <li>{{inlaw.birthday}}</li>
-          <li>{{inlaw.hobbies}}</li>
-          <li>{{inlaw.notes}}</li>
+          <li>
+            <p> <strong>Relation:</strong> </p>{{inlaw.relation}}
+          </li>
+          <li>
+            <p> <strong>Birthday:</strong> </p>{{inlaw.birthday}}
+          </li>
+          <li>
+            <p> <strong>Hobbies:</strong> </p>{{inlaw.hobbies}}
+          </li>
+          <li>
+            <p> <strong>Notes:</strong> </p>{{inlaw.notes}}
+          </li>
         </ul>
       </li>
     </ul>
+    <form v-on:submit.prevent="addInlaw">
+      <strong>Name:</strong>
+      <input type="text" v-model="newInlawName">
+      <strong>Relation:</strong>
+      <input type="text" v-model="newInlawRelation">
+      <strong>Birthday:</strong> <input type="text" v-model="newInlawBirthday">
+      <strong>Hobbies:</strong>
+      <input type="text" v-model="newInlawHobbies">
+      <strong>Notes:</strong>
+      <input type="text" v-model="newInlawNotes">
+      <button type="submit">Add</button>
+    </form>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>

@@ -3,6 +3,12 @@
 var app = new Vue({
   el: '#app',
   data: {
+    test: "Hello, World!",
+    newInlawName: '',
+    newInlawRelation: '',
+    newInlawBirthday: '',
+    newInlawHobbies: '',
+    newInlawNotes: '',
     inlaws: [{
         name: 'Inlaw 1',
         relation: 'Wife\'s brother',
@@ -39,8 +45,22 @@ var app = new Vue({
         notes: 'Absolutely insane.'
       }
     ],
-    test: "Hello, World!",
   },
   created: function() {},
-  methods: {}
+  methods: {
+    addInlaw() {
+      this.inlaws.push({
+        name: newInlawName,
+        relation: newInlawRelation,
+        birthday: newInlawBirthday,
+        hobbies: newInlawHobbies,
+        notes: newInlawNotes
+      });
+      this.newInlawName = '';
+      this.newInlawRelation = '';
+      this.newInlawBirthday = '';
+      this.newInlawHobbies = '';
+      this.newInlawNotes = '';
+    }
+  }
 });
