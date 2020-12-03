@@ -5,6 +5,11 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/inlaws', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 var usersRouter = require('./routes/users');
 
 var app = express();
@@ -15,7 +20,9 @@ app.set('view engine', 'jade');
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({
+  extended: false
+}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 

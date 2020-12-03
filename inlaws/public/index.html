@@ -4,12 +4,23 @@
 <head>
   <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
   <meta charset="utf-8">
-  <title>Comments</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Whatserface</title>
 </head>
 
 <body>
+  <noscript>
+    <strong>We're sorry but
+      <%= Whatserface %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+  </noscript>
   <div id="app">
     {{test}}
+    <ul>
+      <li v-for="item in comments">
+        {{ item }}
+      </li>
+    </ul>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
