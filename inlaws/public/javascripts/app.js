@@ -9,6 +9,7 @@ var app = new Vue({
     newInlawBirthday: "",
     newInlawHobbies: "",
     newInlawNotes: "",
+    warning: false,
     inlaws: [{
         name: 'Inlaw 1',
         relation: 'Wife\'s brother',
@@ -49,14 +50,18 @@ var app = new Vue({
   created: function() {},
   methods: {
     addInlaw() {
-      console.log("Adding inlaw");
-      this.inlaws.push({
-        name: this.newInlawName,
-        relation: this.newInlawRelation,
-        birthday: this.newInlawBirthday,
-        hobbies: this.newInlawHobbies,
-        notes: this.newInlawNotes
-      });
+      if (this.newInlawName.length > 0) {
+        this.inlaws.push({
+          name: this.newInlawName,
+          relation: this.newInlawRelation,
+          birthday: this.newInlawBirthday,
+          hobbies: this.newInlawHobbies,
+          notes: this.newInlawNotes
+        });
+      } else {
+        this.warning = true;
+      }
+
       this.newInlawName = '';
       this.newInlawRelation = '';
       this.newInlawBirthday = '';
