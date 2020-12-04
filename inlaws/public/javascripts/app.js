@@ -4,11 +4,11 @@ var app = new Vue({
   el: '#app',
   data: {
     test: "Hello, World!",
-    newInlawName: '',
-    newInlawRelation: '',
-    newInlawBirthday: '',
-    newInlawHobbies: '',
-    newInlawNotes: '',
+    newInlawName: "",
+    newInlawRelation: "",
+    newInlawBirthday: "",
+    newInlawHobbies: "",
+    newInlawNotes: "",
     inlaws: [{
         name: 'Inlaw 1',
         relation: 'Wife\'s brother',
