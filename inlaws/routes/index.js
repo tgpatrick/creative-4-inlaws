@@ -11,9 +11,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/edit', function(req, res, next) {
-  res.render('Edit', {
-    title: 'Whatserface - Edit'
-  });
+  res.sendFile('../public/edit.html')
 });
 
 router.get('/api/inlaws', function(req, res, next) {
