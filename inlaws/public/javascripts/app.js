@@ -51,11 +51,11 @@ var app = new Vue({
     addInlaw() {
       console.log("Adding inlaw");
       this.inlaws.push({
-        name: newInlawName,
-        relation: newInlawRelation,
-        birthday: newInlawBirthday,
-        hobbies: newInlawHobbies,
-        notes: newInlawNotes
+        name: this.newInlawName,
+        relation: this.newInlawRelation,
+        birthday: this.newInlawBirthday,
+        hobbies: this.newInlawHobbies,
+        notes: this.newInlawNotes
       });
       this.newInlawName = '';
       this.newInlawRelation = '';
