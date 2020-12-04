@@ -1,6 +1,8 @@
 /*global axios */
 /*global Vue */
+import router from '../../src/router'
 var app = new Vue({
+  router,
   el: '#app',
   data: {
     test: "This is the edit test!",
