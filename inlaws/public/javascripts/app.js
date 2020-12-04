@@ -48,6 +48,7 @@ var app = new Vue({
   },
   created: function() {},
   methods: {
+    console.log("Adding inlaw")
     addInlaw() {
       this.inlaws.push({
         name: newInlawName,

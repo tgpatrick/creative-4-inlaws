@@ -36,15 +36,20 @@
       </li>
     </ul>
     <form v-on:submit.prevent="addInlaw">
-      <strong>Name:</strong>
+      <p><strong>Name:</strong></p>
       <input type="text" v-model="newInlawName">
-      <strong>Relation:</strong>
-      <input type="text" v-model="newInlawRelation">
-      <strong>Birthday:</strong> <input type="text" v-model="newInlawBirthday">
-      <strong>Hobbies:</strong>
-      <input type="text" v-model="newInlawHobbies">
-      <strong>Notes:</strong>
-      <input type="text" v-model="newInlawNotes">
+      <div class="formSection">
+        <p><strong>Relation:</strong></p>
+        <input type="text" v-model="newInlawRelation">
+        <p><strong>Birthday:</strong></p>
+        <input type="text" v-model="newInlawBirthday">
+      </div>
+      <div class="formSection">
+        <p><strong>Hobbies:</strong></p>
+        <input type="text" v-model="newInlawHobbies">
+        <p><strong>Notes:</strong></p>
+        <input type="text" v-model="newInlawNotes">
+      </div>
       <button type="submit">Add</button>
     </form>
   </div>
