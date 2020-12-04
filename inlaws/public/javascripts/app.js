@@ -3,7 +3,6 @@
 var app = new Vue({
   el: '#app',
   data: {
-    test: "This is the edit test!",
     newInlawName: "",
     newInlawRelation: "",
     newInlawBirthday: "",
