@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/edit', function(req, res, next) {
-  res.sendFile(path.join(__dirname + '/public/edit.html'));
+  res.sendFile(path.join(__dirname + '/edit.html'));
 });
 
 router.get('/api/inlaws', function(req, res, next) {
