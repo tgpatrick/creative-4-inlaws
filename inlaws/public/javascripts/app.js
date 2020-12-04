@@ -58,6 +58,7 @@ var app = new Vue({
           hobbies: this.newInlawHobbies,
           notes: this.newInlawNotes
         });
+        this.warnign = false;
       } else {
         this.warning = true;
       }
@@ -67,6 +68,12 @@ var app = new Vue({
       this.newInlawBirthday = '';
       this.newInlawHobbies = '';
       this.newInlawNotes = '';
+    },
+    deleteInlaw(inlaw) {
+      const index = this.inlaws.indexOf(inlaw);
+      if (index > -1) {
+        this.inlaws.splice(index, 1);
+      }
     }
   }
 });

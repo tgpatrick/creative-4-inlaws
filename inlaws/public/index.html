@@ -33,6 +33,7 @@
             <p> <strong>Notes:</strong> </p>{{inlaw.notes}}
           </li>
         </ul>
+        <button @click="deleteInlaw(inlaw)">Delete</button>
       </li>
     </ul>
     <form v-on:submit.prevent="addInlaw">
@@ -50,7 +51,7 @@
       </div>
       <button type="submit">Add</button>
     </form>
-    <p v-if:"warning">You must include a name!</p>
+    <p v-if="warning">You must include a name!</p>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
