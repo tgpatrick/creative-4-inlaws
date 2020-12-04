@@ -10,6 +10,12 @@ router.get('/', function(req, res, next) {
   });
 });
 
+router.get('/edit', function(req, res, next) {
+  res.render('index', {
+    title: 'Whatserface - Edit'
+  });
+});
+
 router.get('/api/inlaws', function(req, res, next) {
   Inlaw.find(function(err, inlaws) {
     if (err) {
