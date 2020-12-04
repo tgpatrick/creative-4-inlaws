@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var path = require('path');
 var mongoose = require('mongoose');
 var Inlaw = mongoose.model('Inlaw');
 
@@ -11,7 +12,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/edit', function(req, res, next) {
-  res.sendFile('../public/edit.html')
+  res.sendFile(path.join(__dirname + '/public/edit.html'));
 });
 
 router.get('/api/inlaws', function(req, res, next) {
