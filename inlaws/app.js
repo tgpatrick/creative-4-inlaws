@@ -9,7 +9,7 @@ mongoose.connect('mongodb://localhost/inlaws', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
-require('./models/Comments');
+require('./models/Inlaws');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
