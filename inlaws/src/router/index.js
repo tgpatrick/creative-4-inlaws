@@ -6,16 +6,15 @@ import Edit from '../views/Edit.vue'
 Vue.use(VueRouter)
 
 const routes = [{
-  path: '/',
-  name: 'Whatserface',
-  component: Home
-},
-{
-  path: '/edit',
-  name: 'Whatserface - Edit',
-  component: Edit
-}
-}
+    path: '/',
+    name: 'Whatserface',
+    component: Home
+  },
+  {
+    path: '/edit',
+    name: 'Whatserface - Edit',
+    component: Edit
+  }
 ]
 
 const router = new VueRouter({
