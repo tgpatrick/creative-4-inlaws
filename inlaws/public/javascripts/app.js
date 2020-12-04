@@ -48,8 +48,8 @@ var app = new Vue({
   },
   created: function() {},
   methods: {
-    console.log("Adding inlaw");
     addInlaw() {
+      console.log("Adding inlaw");
       this.inlaws.push({
         name: newInlawName,
         relation: newInlawRelation,
