@@ -12,6 +12,11 @@
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "mongoose": "^5.11.3",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "vue-router": "^3.2.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-router": "^4.5.9",
+    "@vue/cli-service": "^4.5.9"
   }
 }
