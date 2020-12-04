@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/edit', function(req, res, next) {
-  res.render('edit', {
+  res.render('edit.html', {
     title: 'Whatserface - Edit'
   });
 });
