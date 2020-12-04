@@ -43,7 +43,7 @@ router.param('inlaw', function(req, res, next, id) {
   });
 });
 
-router.get('/api/inlaw/:inlaw', function(req, res) {
+router.get('/api/inlaws/:inlaw', function(req, res) {
   res.json(req.inlaw);
 });
 
@@ -64,5 +64,17 @@ router.put('/api/inlaws/:id', async (req, res) => {
     res.sendStatus(500);
   }
 });
+
+router.delete('/api/inlaws/:id', async (req, res) => {
+  try {
+    await Inlaw.deleteOne({
+      _id: req.params.id
+    });
+    res.sendStatus(200);
+  } catch (error) {
+    console.log(error);
+    res.sendStatus(500);
+  }
+})
 
 module.exports = router;

@@ -46,18 +46,37 @@ var app = new Vue({
       }
     ],
   },
-  created: function() {},
+  created: function() {
+    this.getall();
+  },
   methods: {
+    async getall() {
+      var url = "/api/inlaws";
+      try {
+        let response = await axios.get(url);
+        this.inlaws = response.data;
+        return true;
+      } catch (error) {
+        console.log(error);
+      }
+    },
     addInlaw() {
       if (this.newInlawName.length > 0) {
-        this.inlaws.push({
-          name: this.newInlawName,
-          relation: this.newInlawRelation,
-          birthday: this.newInlawBirthday,
-          hobbies: this.newInlawHobbies,
-          notes: this.newInlawNotes
-        });
-        this.warnign = false;
+        var url = "/api/inlaws";
+        axios.post(url, {
+            name: this.newInlawName,
+            relation: this.newInlawRelation,
+            birthday: this.newInlawBirthday,
+            hobbies: this.newInlawHobbies,
+            notes: this.newInlawNotes
+          })
+          .then(response => {
+            this.inlaws.push(response.data);
+          })
+          .catch(error => {
+            console.log(error);
+          })
+        this.warning = false;
       } else {
         this.warning = true;
       }
