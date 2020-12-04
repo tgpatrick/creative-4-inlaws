@@ -17,19 +17,19 @@
   <div id="app">
     <ul>
       <li v-for="inlaw in inlaws">
-        {{ inlaw.name }}
+        <h3>{{inlaw.name}}</h3>
         <ul>
           <li>
-            <p> <strong>Relation:</strong> </p>{{inlaw.relation}}
+            <p> <strong>Relation:</strong> {{inlaw.relation}} </p>
           </li>
           <li>
-            <p> <strong>Birthday:</strong> </p>{{inlaw.birthday}}
+            <p> <strong>Birthday:</strong> {{inlaw.birthday}} </p>
           </li>
           <li>
-            <p> <strong>Hobbies:</strong> </p>{{inlaw.hobbies}}
+            <p> <strong>Hobbies:</strong> {{inlaw.hobbies}} </p>
           </li>
           <li>
-            <p> <strong>Notes:</strong> </p>{{inlaw.notes}}
+            <p> <strong>Notes:</strong> {{inlaw.notes}} </p>
           </li>
         </ul>
         <button @click="deleteInlaw(inlaw)">Delete</button>
